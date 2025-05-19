@@ -1,13 +1,16 @@
-# ch 5.2.1 ctrl.py
+# ch 6.4.1 ctrl.py
 class Control:
 
 	def __init__(self, view):
 		self.view = view
 		self.connectSignals()
 
-	def calculate(self):  # calculate 메서드 추가. 내용은 추후에 작성
+	def calculate(self):
 		pass
 
 	def connectSignals(self):
-		self.view.btn1.clicked.connect(self.view.calculate) # 버튼 1 연결을 변경
+		self.view.btn1.clicked.connect(self.view.calculate)
 		self.view.btn2.clicked.connect(self.view.clearMessage)
+
+	def sum(self, a, b): # 덧셈 함수 추가
+		return a+b
