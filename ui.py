@@ -1,4 +1,4 @@
-# ch 7.6.1 ui.py
+# ch 7.7.2 ui.py
 from PyQt5.QtWidgets import (QApplication,QWidget,QPushButton,QVBoxLayout,QMessageBox,QPlainTextEdit,QHBoxLayout,QLineEdit,QComboBox) # QLineEdit, QComboBox 추가
 from PyQt5.QtGui import QIcon
 from PyQt5 import QtCore # 모듈 추가
@@ -22,7 +22,8 @@ class View(QWidget):
 		self.le2.setAlignment(QtCore.Qt.AlignRight)
 
 		self.cb = QComboBox(self)
-		self.cb.addItems(['+', '-', '*', '/', '^', '%']) # % 연산자 추가
+		#self.cb.addItems(['+', '-', '*', '/', '^', '%'])
+		self.cb.addItems(['+', '-', '*', '/']) # ^ 와 % 연산자 제거
 
 		self.btn1=QPushButton('Calc', self)
 		self.btn2=QPushButton('Clear', self)
